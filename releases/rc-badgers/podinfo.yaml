@@ -5,7 +5,7 @@ metadata:
   name: podinfo-dev
   namespace: rc-badgers
   annotations:
-    fluxcd.io/automated: "true"
+    fluxcd.io/automated: "false"
     filter.fluxcd.io/chart-image: glob:dev-*
 spec:
   releaseName: podinfo-dev
@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: stefanprodan/podinfo
-      tag: dev-hdtwcel9
+      tag: 3.1.5
     replicaCount: 1
     hpa:
       enabled: false
