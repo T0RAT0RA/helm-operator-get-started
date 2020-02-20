@@ -1,0 +1,19 @@
+---
+  apiVersion: helm.fluxcd.io/v1
+  kind: HelmRelease
+  metadata:
+    name: api-auth
+    namespace: rc-badgers
+    annotations:
+      fluxcd.io/automated: "false"
+      filter.fluxcd.io/chart-image: glob:dev-*
+  spec:
+    releaseName: api-auth
+    chart:
+      git: git@github.com:/AlayaCare/helm-charts
+      path: services/apiauth
+      ref: modify-structure
+    values:
+      deployment:
+        tag: develop
+        replicas: 1
