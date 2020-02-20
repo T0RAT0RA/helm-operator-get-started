@@ -10,7 +10,7 @@
   spec:
     releaseName: api-auth
     chart:
-      git: git@github.com:/AlayaCare/helm-charts
+      git: git@github.com:AlayaCare/helm-charts
       path: services/apiauth
       ref: modify-structure
     values:
